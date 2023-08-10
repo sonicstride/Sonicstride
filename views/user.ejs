@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <div id="content"></div>
-        <script>
-        content = document.getElementById('content');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h3>模擬前端app</h3>
 
-        setInterval(function(){
-            var xhr = new XMLHttpRequest();
-            xhr.open('post','/readData');
-            xhr.setRequestHeader("Content-type", "application/json");
-            var data = ''
-            xhr.send(data);
-            xhr.onload = function(){
-                console.log(xhr.responseText);
-                content.innerHTML = xhr.responseText;
-            }
-        }, 3000);
+    <div>username</div>
+    <input type="text" id="username" value="">
 
-    </script>
-    </body>
+    <div>phone</div>
+    <input type="text" id="phone" value="">
+
+    <div>email</div>
+    <input type="text" id="email" value="">
+
+    <input type="button" id="send" value="send">
+    <script src="/js/app.js"></script>
+</body>
 </html>

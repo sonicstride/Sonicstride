@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+    <body>
+        <h1>顯示後台資料</h1>
+        <ul>
+            <%for(item in datalist){%>
+                
+                <li><%- datalist[item].name%></li>
+                <li><%- datalist[item].phone%></li>
+                <li><%- datalist[item].email%></li>
+                <hr>
+            <%}%>
+        </ul>
+
+        <!-- <script>
+            content = document.getElementById('content');
+
+            setInterval(function(){
+                var xhr = new XMLHttpRequest();
+                xhr.open('post','/readData');
+                //xhr.responseType = 'json';
+                xhr.setRequestHeader("Content-type", "application/json");
+                var data = '';
+                xhr.send(data);
+            }, 3000);
+
+        </script> -->
+    </body>
+</html>
