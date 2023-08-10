@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+        content = document.getElementById('content');
+
+        setInterval(function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('post','/readData');
+            xhr.setRequestHeader("Content-type", "application/json");
+            var data = ''
+            xhr.send(data);
+            xhr.onload = function(){
+                console.log(xhr.responseText);
+                content.innerHTML = xhr.responseText;
+            }
+        }, 3000);
+
+    </script>
+    </body>
+</html>
