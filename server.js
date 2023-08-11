@@ -56,7 +56,7 @@ app.post('/writeData', function (req, res) {
     console.log(req.body);
     var fireurl = fireData.ref('userdata').push();
     fireurl.set(req.body);
-    res.send("get msg : " + req.body);
+    res.send("get msg : " + req.body.name + " | " + req.body.phone + " | " + req.body.email);
 });
 
 
